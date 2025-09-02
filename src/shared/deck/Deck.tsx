@@ -1,4 +1,5 @@
 import { useEffect, useRef, Children } from 'react'
+import { useMusic } from '../music/MusicProvider'
 import type { PropsWithChildren } from 'react'
 
 type Props = PropsWithChildren<{
@@ -11,6 +12,7 @@ type Props = PropsWithChildren<{
 
 export default function Deck({ title, index, total, children, onPrev, onNext }: Props) {
   const hostRef = useRef(null)
+  const { playRandom, stop } = useMusic()
 
   useEffect(() => {
     ;(hostRef.current as HTMLDivElement | null)?.focus()
@@ -19,6 +21,8 @@ export default function Deck({ title, index, total, children, onPrev, onNext }: 
   const handleKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === 'ArrowRight' || e.key === ' ') onNext?.()
     if (e.key === 'ArrowLeft') onPrev?.()
+    if ((e.key === 's' || e.key === 'S') && !e.repeat) playRandom()
+    if ((e.key === 'd' || e.key === 'D') && !e.repeat) stop()
   }
 
   return (

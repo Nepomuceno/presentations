@@ -3,11 +3,14 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './styles/index.css'
 import App from './App'
+import { MusicProvider } from './shared/music/MusicProvider'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <MusicProvider>
+        <App />
+      </MusicProvider>
     </BrowserRouter>
   </React.StrictMode>
 )
