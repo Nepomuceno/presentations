@@ -1,9 +1,19 @@
 {
-  "name": "presentations",
+  "name": "gabe-presentations-styles",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "packageManager": "bun@1.2.21",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nepomuceno/presentations.git"
+  },
+  "homepage": "https://github.com/Nepomuceno/presentations",
+  "bugs": {
+    "url": "https://github.com/Nepomuceno/presentations/issues"
+  },
+  "author": "Gabriel Nepomuceno",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

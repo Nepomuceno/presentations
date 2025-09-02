@@ -1,6 +1,6 @@
-# Presentations (React + Vite + Tailwind v4)
+# Gabe Presentations Styles
 
-A lightweight, modular slide system to build beautiful presentations fast using React, Vite, Tailwind v4, and Framer Motion. Each presentation is a component; each slide is a tiny TSX file for maximum reuse and composability.
+A lightweight, modular slide system to build beautiful presentations fast using React, Vite, Tailwind v4, and Framer Motion — branded as “Gabe Presentations Styles”. Each presentation is a component; each slide is a tiny TSX file for maximum reuse and composability.
 
 ## Stack
 
@@ -67,6 +67,10 @@ src/
 - Config is plugin-based; no `tailwind.config.js` required. Tokens are defined in `src/styles/index.css` under `@theme`.
 - Add global styles/tokens in `src/styles/index.css`.
 
+## GitHub
+
+- Repo: https://github.com/Nepomuceno/presentations
+
 ## GitHub Actions (CI)
 
 - `.github/workflows/ci.yml` runs install, typecheck, and build on pushes and PRs to `main` using Bun.
@@ -83,11 +87,10 @@ git commit -m "chore: bootstrap presentations app"
 git branch -M main
 
 # Set the remote and push
-# git remote add origin git@github.com:<you>/<repo>.git
-# git push -u origin main
+git remote add origin git@github.com:Nepomuceno/presentations.git
+git push -u origin main
 ```
 
 ## License
 
-No license is declared yet. Add a LICENSE file if you plan to open source.
-
+MIT — see LICENSE.

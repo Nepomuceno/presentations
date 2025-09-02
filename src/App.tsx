@@ -7,8 +7,8 @@ export default function App() {
     <div className="min-h-full flex flex-col">
       <header className="sticky top-0 z-20 backdrop-blur supports-[backdrop-filter]:bg-black/20 bg-black/10 border-b border-[var(--line)]">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="font-extrabold tracking-tight text-xl" title="Presentations Home">
-            <span className="bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">Decks</span>
+          <Link to="/" className="font-extrabold tracking-tight text-xl" title="Gabe Presentations Styles">
+            <span className="bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">Gabe Presentations</span>
           </Link>
           <nav className="text-sm text-[var(--muted)]">
             <a href="/" className="hover:text-[var(--fg)]">Home</a>
