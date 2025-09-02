@@ -1,5 +1,6 @@
 import SampleDeck from './sample/SampleDeck'
 import StoryPointsDeck from './storypoints/StoryPointsDeck'
+import PlatformDeck from './platform/PlatformDeck'
 import type { PresentationEntry, SlideMeta } from '../types'
 
 const sampleSlides: SlideMeta[] = [
@@ -34,6 +35,25 @@ const presentations: PresentationEntry[] = [
       { id: 'citations', transition: 'up' },
     ],
     component: StoryPointsDeck,
+  },
+  {
+    id: 'platform',
+    title: 'How I Built My Presentation Platform',
+    subtitle: 'From frustration to a working system',
+    slides: [
+      { id: 'title', transition: 'fade' },
+      { id: 'context', transition: 'up' },
+      { id: 'spark', transition: 'fade' },
+      { id: 'first-attempt', transition: 'slide' },
+      { id: 'realization', transition: 'up' },
+      { id: 'breakthrough', transition: 'fade' },
+      { id: 'first-real-use', transition: 'slide' },
+      { id: 'workflow', transition: 'up' },
+      { id: "what-you're-seeing", transition: 'fade' },
+      { id: 'whats-next', transition: 'slide' },
+      { id: 'closing', transition: 'fade' },
+    ],
+    component: PlatformDeck,
   },
 ]
 

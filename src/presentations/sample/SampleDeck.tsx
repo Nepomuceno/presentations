@@ -1,4 +1,4 @@
-import type { DeckComponentProps } from '../types'
+import type { DeckComponentProps } from '../../types'
 
 export default function SampleDeck({ slide, idx }: DeckComponentProps) {
   if (slide.id === 'intro') return <Intro />

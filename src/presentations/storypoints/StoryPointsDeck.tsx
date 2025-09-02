@@ -1,4 +1,4 @@
-import type { DeckComponentProps } from '../types'
+import type { DeckComponentProps } from '../../types'
 import Title from './slides/Title'
 import HookJeffries from './slides/HookJeffries'
 import ComplexityTrap from './slides/ComplexityTrap'
