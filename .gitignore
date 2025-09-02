@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+
+# Node/Bun
+node_modules/
+.pnp.cjs
+.pnp.loader.mjs
+bun.lockb
+
+# Builds
+dist/
+.vite/
+
+# Env
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+

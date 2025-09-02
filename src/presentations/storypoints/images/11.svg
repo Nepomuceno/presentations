@@ -1,0 +1,35 @@
+<!-- Slide 11 — Close (Do Agile, Not Arithmetic)
+     Minimal accent: a forward arrow breaking through a bracket into a target ring/check.
+     Animatable IDs: #arrow (translate), #bracket (opacity/scale), #ring/#check (pulse).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-labelledby="s11title s11desc">
+  <title id="s11title">Close — Forward to Value</title>
+  <desc id="s11desc">A gradient arrow pushing through a bracket barrier into a ring with a check, symbolizing moving past arithmetic to outcomes.</desc>
+
+  <defs>
+    <linearGradient id="accGrad11" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      :root { --line:#2a3340; }
+    </style>
+  </defs>
+
+  <!-- Barrier bracket -->
+  <g id="bracket" transform="translate(300,80)" stroke="var(--line)" stroke-width="10" stroke-linecap="round" opacity=".7">
+    <path d="M -40,-26 q -14,0 -14,14 v24 q 0,14 14,14"/>
+  </g>
+
+  <!-- Arrow (forward) -->
+  <g id="arrow" transform="translate(220,80)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="url(#accGrad11)" stroke-width="12" stroke-linecap="round"/>
+    <polygon points="100,-14 130,0 100,14" fill="url(#accGrad11)"/>
+  </g>
+
+  <!-- Target ring + check -->
+  <g id="target" transform="translate(460,80)">
+    <circle id="ring" cx="0" cy="0" r="26" fill="none" stroke="url(#accGrad11)" stroke-width="8"/>
+    <path id="check" d="M -10,2 L -2,12 L 14,-8" fill="none" stroke="#22c55e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

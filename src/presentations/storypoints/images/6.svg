@@ -1,0 +1,37 @@
+<!-- Slide 6 — Goodhart/Campbell (Measurement → Target)
+     Minimal accent: small bar chart feeding a curved gradient arrow into a target/bullseye.
+     Easy to animate later: #b1,#b2,#b3 heights; #arc stroke-dashoffset; #head translate/rotate; #ring1/#ring2 scale/opacity.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-labelledby="s6title s6desc">
+  <title id="s6title">Goodhart/Campbell — Measure Became Target</title>
+  <desc id="s6desc">Bars on the left curve into a bullseye on the right, suggesting a measure turning into a target.</desc>
+
+  <defs>
+    <linearGradient id="accGrad6" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      :root { --muted:#9fb0c3; --line:#2a3340; }
+    </style>
+  </defs>
+
+  <!-- Bars (measure) -->
+  <g id="bars" transform="translate(90,116)" fill="var(--muted)">
+    <rect id="b1" x="-30" y="-36" width="16" height="72" rx="4"/>
+    <rect id="b2" x="-8"  y="-56" width="16" height="112" rx="4"/>
+    <rect id="b3" x="14"  y="-44" width="16" height="88" rx="4"/>
+    <rect x="-48" y="-70" width="96" height="140" rx="10" fill="none" stroke="var(--line)" opacity=".45"/>
+  </g>
+
+  <!-- Curved arrow (measure -> target) -->
+  <path id="arc" d="M 140,96 C 240,20 360,136 460,94" fill="none" stroke="url(#accGrad6)" stroke-width="10" stroke-linecap="round"/>
+  <path id="head" d="M 444,86 L 472,94 L 444,102 Z" fill="url(#accGrad6)"/>
+
+  <!-- Target (bullseye) -->
+  <g id="target" transform="translate(520,90)">
+    <circle id="ring2" cx="0" cy="0" r="34" fill="none" stroke="url(#accGrad6)" stroke-width="8"/>
+    <circle id="ring1" cx="0" cy="0" r="18" fill="none" stroke="url(#accGrad6)" stroke-width="6" opacity=".9"/>
+    <circle id="dot"   cx="0" cy="0" r="4"  fill="#ffffff"/>
+  </g>
+</svg>

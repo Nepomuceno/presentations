@@ -1,0 +1,37 @@
+<!-- Slide 12 — Citations
+     Minimal accent: bookmark ribbon + chain link + three bullet dots.
+     Animatable IDs: #ribbon (drop), #chain (wobble), #dot1/#dot2/#dot3 (stagger).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-labelledby="s12title s12desc">
+  <title id="s12title">Citations Accent</title>
+  <desc id="s12desc">A small bookmark ribbon, a chain link, and three bullet dots representing sources and references.</desc>
+
+  <defs>
+    <linearGradient id="accGrad12" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      :root { --muted:#9fb0c3; --line:#2a3340; }
+    </style>
+  </defs>
+
+  <!-- Bookmark ribbon -->
+  <g id="ribbon" transform="translate(180,42)">
+    <rect x="0" y="0" width="24" height="60" rx="6" fill="url(#accGrad12)"/>
+    <polygon points="0,60 12,50 24,60" fill="url(#accGrad12)"/>
+  </g>
+
+  <!-- Chain link -->
+  <g id="chain" transform="translate(300,72)" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round">
+    <rect x="-34" y="-16" width="44" height="32" rx="16" opacity=".9"/>
+    <rect x="-10" y="-16" width="44" height="32" rx="16" opacity=".9"/>
+  </g>
+
+  <!-- Bullet dots -->
+  <g id="bullets" transform="translate(460,72)" fill="var(--muted)" opacity=".95">
+    <circle id="dot1" cx="-24" cy="0" r="6"/>
+    <circle id="dot2" cx="0"   cy="0" r="6"/>
+    <circle id="dot3" cx="24"  cy="0" r="6"/>
+  </g>
+</svg>

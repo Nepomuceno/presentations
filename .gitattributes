@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# Merge behavior for lockfiles
+package-lock.json -merge
+yarn.lock -merge
+pnpm-lock.yaml -merge
+bun.lockb -merge
+

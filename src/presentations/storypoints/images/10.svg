@@ -1,0 +1,55 @@
+<!-- Slide 10 — Mini Example (Before / After)
+     Minimal accent: two compact cards; left shows many points + low-value cross,
+     right shows fewer points + value ring/check.
+     Animatable IDs: #cardA/#cardB (scale/opacity), #dotsA/#dotsB (stagger),
+                     #cross/#check/#ring (pulse/scale).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-labelledby="s10title s10desc">
+  <title id="s10title">Mini Example — Before and After</title>
+  <desc id="s10desc">Left card: many dots and a red cross (low value). Right card: fewer dots and a ring with a check (higher value).</desc>
+
+  <defs>
+    <linearGradient id="accGrad10" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      :root { --muted:#9fb0c3; --line:#2a3340; }
+    </style>
+  </defs>
+
+  <!-- Before -->
+  <g id="cardA" transform="translate(200,100)">
+    <rect x="-120" y="-60" width="240" height="120" rx="16" fill="none" stroke="var(--line)" opacity=".6"/>
+    <!-- many points -->
+    <g id="dotsA" fill="var(--muted)" opacity=".95">
+      <circle cx="-70" cy="-22" r="4"/><circle cx="-46" cy="-22" r="4"/><circle cx="-22" cy="-22" r="4"/>
+      <circle cx="2"   cy="-22" r="4"/><circle cx="26"  cy="-22" r="4"/><circle cx="50"  cy="-22" r="4"/>
+      <circle cx="-58" cy="0"   r="4"/><circle cx="-34" cy="0"   r="4"/><circle cx="-10" cy="0"   r="4"/>
+      <circle cx="14"  cy="0"   r="4"/><circle cx="38"  cy="0"   r="4"/><circle cx="62"  cy="0"   r="4"/>
+      <circle cx="-46" cy="22"  r="4"/><circle cx="-22" cy="22"  r="4"/><circle cx="2"   cy="22"  r="4"/>
+      <circle cx="26"  cy="22"  r="4"/><circle cx="50"  cy="22"  r="4"/>
+    </g>
+    <!-- low-value cross -->
+    <g id="cross" stroke="#f43f5e" stroke-linecap="round" stroke-width="10">
+      <line x1="74" y1="-34" x2="104" y2="-4"/>
+      <line x1="74" y1="-4"  x2="104" y2="-34"/>
+    </g>
+  </g>
+
+  <!-- After -->
+  <g id="cardB" transform="translate(440,100)">
+    <rect x="-120" y="-60" width="240" height="120" rx="16" fill="none" stroke="var(--line)" opacity=".6"/>
+    <!-- fewer points -->
+    <g id="dotsB" fill="var(--muted)" opacity=".95">
+      <circle cx="-30" cy="-10" r="5"/>
+      <circle cx="-6"  cy="-10" r="5"/>
+      <circle cx="18"  cy="-10" r="5"/>
+    </g>
+    <!-- value ring + check -->
+    <g id="value" transform="translate(60,6)">
+      <circle id="ring" cx="0" cy="0" r="20" fill="none" stroke="url(#accGrad10)" stroke-width="8"/>
+      <path id="check" d="M -9,2 L -2,10 L 12,-8" fill="none" stroke="#22c55e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<!-- Slide 4 — Weaponization & Vanity
+     Minimal accent: tiny leaderboard with a crown and a diagonal strike (gaming/vanity).
+     Easy to animate: bar heights (#b1,#b2,#b3), crown bounce/opacity (#crown), strike draw (#slash).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-labelledby="s4title s4desc">
+  <title id="s4title">Weaponization and Vanity</title>
+  <desc id="s4desc">A small leaderboard with a crown on top and a diagonal strike through it, suggesting comparison and gaming behaviors.</desc>
+
+  <defs>
+    <linearGradient id="accGrad4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      :root { --muted:#9fb0c3; --line:#2a3340; }
+    </style>
+  </defs>
+
+  <!-- Leaderboard frame -->
+  <rect x="218" y="30" width="204" height="120" rx="14" fill="none" stroke="var(--line)" opacity=".5"/>
+
+  <!-- Bars -->
+  <g id="board" transform="translate(320,90)" fill="var(--muted)">
+    <rect id="b1" x="-54" y="-24" width="20" height="48" rx="4"/>
+    <rect id="b2" x="-10" y="-46" width="20" height="92" rx="4"/>
+    <rect id="b3" x="34"  y="-34" width="20" height="68" rx="4"/>
+  </g>
+
+  <!-- Crown (vanity) -->
+  <g id="crown" transform="translate(320,38)">
+    <path d="M -28,18 L -22,0 L -6,12 L 6,-6 L 20,12 L 26,0 L 32,18 Z" fill="url(#accGrad4)"/>
+    <rect x="-30" y="18" width="64" height="8" rx="4" fill="url(#accGrad4)"/>
+  </g>
+
+  <!-- Slash (harmful comparison) -->
+  <line id="slash" x1="210" y1="140" x2="430" y2="40" stroke="url(#accGrad4)" stroke-width="10" stroke-linecap="round"/>
+</svg>

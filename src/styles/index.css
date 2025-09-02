@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Tailwind v4 tokens (used by from-accent/to-accent2, etc.) */
+@theme {
+  --color-accent: #7c3aed;
+  --color-accent2: #22c55e;
+  --color-bg: 13 17 23;        /* rgb */
+  --color-fg: 230 237 243;
+  --color-muted: 159 176 195;
+  --color-line: 42 51 64;
+}
+
+:root {
+  --bg: #0d1117;
+  --fg: #e6edf3;
+  --muted: #9fb0c3;
+  --accent: #7c3aed;
+  --accent2: #22c55e;
+  --line: #2a3340;
+  --surface: rgba(255, 255, 255, 0.03);
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(700px 380px at 50% 120%, rgba(124,58,237,0.10), transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg) 100%);
+  color: var(--fg);
+  font-family: "Inter", "Space Grotesk", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle global font size bump for better readability */
+html { font-size: 17px; }
+@media (min-width: 1280px) { html { font-size: 18px; } }
+
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  background: repeating-linear-gradient(135deg, transparent 0 12px, rgba(255,255,255,.02) 12px 24px);
+}
+
+/* Tailwind v4 replacement for custom animation utilities */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(8px)} to { opacity: 1; transform: translateY(0)} }
+@keyframes scaleXIn { from { transform: scaleX(0)} to { transform: scaleX(1)} }
+.animate-fade-in-up { animation: fadeInUp .5s ease-out both }
+.animate-scale-x-in { animation: scaleXIn .6s ease-out both }
+
+/* Shadow helper used in cards */
+.shadow-glow { box-shadow: 0 0 24px rgba(124,58,237,.25) }
+
+/* Focus accessibility */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}

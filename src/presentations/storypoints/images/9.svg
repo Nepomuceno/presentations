@@ -1,0 +1,55 @@
+<!-- Slide 9 — Alternatives (Throughput • DORA • Smaller Slices/WIP)
+     Minimal accent: three compact badges. All visible, easy to animate later.
+     Animatable IDs: #throughput (bar heights), #dora (tick rotations/opacity),
+                     #slices (slice scales), #linkA/#linkB (stroke-dashoffset).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-labelledby="s9title s9desc">
+  <title id="s9title">Alternatives: Throughput, DORA, Smaller Slices</title>
+  <desc id="s9desc">Three small badges: a throughput bar mini-chart, a DORA ring with four ticks, and three thin vertical slices indicating smaller work items/WIP.</desc>
+
+  <defs>
+    <linearGradient id="accGrad9" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      :root { --muted:#9fb0c3; --line:#2a3340; }
+    </style>
+  </defs>
+
+  <!-- Connector lines (optional accent) -->
+  <line id="linkA" x1="220" y1="90" x2="320" y2="90" stroke="url(#accGrad9)" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+  <line id="linkB" x1="320" y1="90" x2="420" y2="90" stroke="url(#accGrad9)" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+
+  <!-- Throughput badge -->
+  <g id="throughput" transform="translate(140,90)">
+    <rect x="-60" y="-40" width="120" height="80" rx="14" fill="none" stroke="var(--line)" opacity=".5"/>
+    <g fill="url(#accGrad9)">
+      <rect x="-36" y="12" width="12" height="24" rx="3"/>
+      <rect x="-16" y="4"  width="12" height="32" rx="3"/>
+      <rect x="4"   y="-6" width="12" height="42" rx="3"/>
+      <rect x="24"  y="-14" width="12" height="50" rx="3"/>
+    </g>
+  </g>
+
+  <!-- DORA badge (ring + four ticks) -->
+  <g id="dora" transform="translate(320,90)">
+    <circle cx="0" cy="0" r="28" fill="none" stroke="url(#accGrad9)" stroke-width="8"/>
+    <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".9">
+      <line x1="0" y1="-36" x2="0" y2="-28"/>
+      <line x1="36" y1="0"  x2="28" y2="0"/>
+      <line x1="0" y1="36"  x2="0" y2="28"/>
+      <line x1="-36" y1="0" x2="-28" y2="0"/>
+    </g>
+  </g>
+
+  <!-- Smaller slices / WIP badge -->
+  <g id="slices" transform="translate(500,90)">
+    <rect x="-60" y="-40" width="120" height="80" rx="14" fill="none" stroke="var(--line)" opacity=".5"/>
+    <g fill="url(#accGrad9)">
+      <rect x="-28" y="-18" width="8" height="36" rx="3"/>
+      <rect x="-8"  y="-24" width="8" height="48" rx="3"/>
+      <rect x="12"  y="-14" width="8" height="28" rx="3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<!-- Slide 5 — Accuracy vs Counting
+     Minimal accent: a balanced scale; left pan has three small squares (counting), right pan has three small dots (points) — level beam indicates equivalence.
+     Easy to animate: beam rotation (#beam), pan positions (#panL,#panR), item opacity/translate (#itemsL,#itemsR).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-labelledby="s5title s5desc">
+  <title id="s5title">Accuracy vs Counting</title>
+  <desc id="s5desc">A simple balance scale with equal pans: left uses squares (story counting), right uses dots (story points), showing similar predictive power.</desc>
+
+  <defs>
+    <linearGradient id="accGrad5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <style>
+      :root { --muted:#9fb0c3; --line:#2a3340; }
+    </style>
+  </defs>
+
+  <!-- Base -->
+  <g id="base" transform="translate(320,160)">
+    <rect x="-18" y="0" width="36" height="16" rx="6" fill="var(--line)" opacity=".8"/>
+    <rect x="-70" y="16" width="140" height="12" rx="6" fill="var(--line)" opacity=".6"/>
+  </g>
+
+  <!-- Beam -->
+  <g id="beam" transform="translate(320,110)">
+    <rect x="-140" y="-6" width="280" height="12" rx="6" fill="url(#accGrad5)"/>
+    <!-- Pivot -->
+    <circle cx="0" cy="0" r="8" fill="#ffffff"/>
+  </g>
+
+  <!-- Left pan: squares (counting) -->
+  <g id="panL" transform="translate(180,140)">
+    <rect x="-36" y="-6" width="72" height="12" rx="6" fill="var(--line)" opacity=".6"/>
+    <g id="itemsL" transform="translate(0,-20)" fill="#9fb0c3">
+      <rect x="-26" y="0" width="12" height="12" rx="2"/>
+      <rect x="-6"  y="-8" width="12" height="12" rx="2"/>
+      <rect x="14"  y="2"  width="12" height="12" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Right pan: dots (points) -->
+  <g id="panR" transform="translate(460,140)">
+    <rect x="-36" y="-6" width="72" height="12" rx="6" fill="var(--line)" opacity=".6"/>
+    <g id="itemsR" transform="translate(0,-20)" fill="#9fb0c3">
+      <circle cx="-20" cy="4" r="6"/>
+      <circle cx="0"   cy="-4" r="6"/>
+      <circle cx="20"  cy="6"  r="6"/>
+    </g>
+  </g>
+</svg>

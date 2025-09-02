@@ -1,0 +1,47 @@
+<!-- Slide 1 — Title Accent Emblem (minimal, fully visible, easy to animate)
+     Concept: points → (misaligned flow) → value target
+     IDs you can animate later: #points, #flow, #spark, #ring, #check
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 140" role="img" aria-labelledby="s1title s1desc">
+  <title id="s1title">Title Accent — Points don’t equal value</title>
+  <desc id="s1desc">Left: a tidy 3×3 grid of points. Middle: a curved gradient path that slightly misses the target. Right: a ring with a small check mark.</desc>
+
+  <defs>
+    <linearGradient id="accGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left: points grid -->
+  <g id="points" transform="translate(40,38)" fill="#9fb0c3">
+    <!-- row 1 -->
+    <circle cx="0" cy="0" r="6"/>
+    <circle cx="28" cy="0" r="6"/>
+    <circle cx="56" cy="0" r="6"/>
+    <!-- row 2 -->
+    <circle cx="0" cy="28" r="6"/>
+    <circle cx="28" cy="28" r="6"/>
+    <circle cx="56" cy="28" r="6"/>
+    <!-- row 3 -->
+    <circle cx="0" cy="56" r="6"/>
+    <circle cx="28" cy="56" r="6"/>
+    <circle cx="56" cy="56" r="6"/>
+    <!-- subtle frame -->
+    <rect x="-14" y="-14" width="84" height="84" rx="10" fill="none" stroke="#2a3340" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <!-- Middle: “missed” flow curve -->
+  <path id="flow"
+        d="M 140,68 C 220,10 300,118 380,80"
+        fill="none" stroke="url(#accGrad)" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Spark at the end of flow -->
+  <circle id="spark" cx="380" cy="80" r="5.5" fill="#ffffff"/>
+
+  <!-- Right: target ring + check (value) -->
+  <g id="target" transform="translate(520,70)">
+    <circle id="ring" cx="0" cy="0" r="34" fill="none" stroke="url(#accGrad)" stroke-width="8"/>
+    <path id="check" d="M -12,4 L -2,14 L 18,-10" fill="none" stroke="#22c55e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
